@@ -10,5 +10,11 @@ conversion: conversion.o
 conversion.o: conversion.c
 	cc -c conversion.c
 
+conversionTests: conversionTests.o
+	cc conversionTests.o -o conversionTests
+
+conversionTests.o: conversionTests.cc
+	cc -c conversion.c
+
 clean:
 	rm -rf conversion tablasDeConversion *.o
