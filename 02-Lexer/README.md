@@ -9,5 +9,5 @@ Pero no podrá reconocer expresiones del estilo:
 
 Para reconocer este tipo de expresiones se debe efectuar un autómata finito de pila.
 
-El programa lexer recibe una ruta de archivo por argumento (./docs/test.txt) y recorre linea por linea
+El programa lexer ejecuta los autómatas en el archivo ./docs/test.txt y recorre linea por linea
 reconociendo la validez de las expresiones y los tokens que la componen.

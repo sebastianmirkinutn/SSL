@@ -1,9 +1,6 @@
-expresión:  expUnaria
-            expUnaria operador expresión
+expresión:  constanteNumérica
+            constanteNumérica operador expresión
             ( expresión )
-
-expUnaria:  constanteNumérica
-            signo constanteNumérica
 
 constanteNumérica:  númeroInicial número
 

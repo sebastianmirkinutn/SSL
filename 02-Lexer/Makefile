@@ -1,7 +1,7 @@
-all: main.exe
+all: lexer.exe
 
-main.exe: main.o reconocedor_automata.o
-	gcc -Wall -o main main.o reconocedor_automata.o
+lexer.exe: main.o reconocedor_automata.o
+	gcc -Wall -o lexer main.o reconocedor_automata.o
 
 main.o: main.c
 	gcc -c -Wall main.c

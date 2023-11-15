@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 // Autómatas
 
@@ -24,11 +25,12 @@ bool es_final(int);
 // Autómata de expresiones
 
 static const int transiciones_expresion[6][17] = {
-    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 1, 5, 5, 2, 5, 5 },
+    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 2, 5, 5 },
     { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 5, 5, 5 },
     { 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 3, 5, 5, 5, 5, 5 },
     { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 5, 4, 5 },
-    { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 5, 5, 5 }
+    { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 5, 5, 5 },
+    { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }
 };
 static const int estados_finales_expresion[2] = { 1, 4 };
 static const int cant_estados_finales_expresion = 2;
@@ -58,10 +60,5 @@ static const int cant_simbolos_operador = 6;
 // En los autómatas de tokens sólo hay un estado final y un estado de error
 // por lo tanto, el vector de estados finales no es necesario como en el caso 
 // del autómata de expresiones
-
-
-// Control de flujo (regex)
-
-
 
 #endif
